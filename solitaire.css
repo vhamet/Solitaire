@@ -3,7 +3,7 @@ body {
 }
 
 #main {
-    height: 100vh;
+    height: calc(100vh - 10px);
     display: grid;
     grid-gap: 40px;
     grid-template-columns: repeat(12, 1fr);
@@ -79,8 +79,12 @@ img {
     position: absolute;
 }
 
+.pick-image:not(.grabbing) {
+    transition: left .25s ease;
+}
+
 .pick-image-facing {
-    cursor: pointer;
+    cursor: grab;
 }
 
 #deck {
